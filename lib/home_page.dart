@@ -140,8 +140,8 @@ class _HomePageState extends State<HomePage> {
 
             SizedBox(height: 15),
 
-          //3 buttons for send+history+qrcode
-            
+            //3 buttons for send+history+qrcode
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Row(
@@ -149,23 +149,22 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   //send button
                   MyButton(
-                    iconImagePath: 'lib/Icons/wallet.png', 
+                    iconImagePath: 'lib/Icons/wallet.png',
                     buttonText: 'Send',
                   ),
-            
+
                   // History button
-            
+
                   MyButton(
-                    iconImagePath: 'lib/Icons/budget.png', 
+                    iconImagePath: 'lib/Icons/budget.png',
                     buttonText: 'History',
                   ),
-            
+
                   //scan qr button
                   MyButton(
-                    iconImagePath: 'lib/Icons/qrcode.png', 
+                    iconImagePath: 'lib/Icons/qrcode.png',
                     buttonText: 'Scan QR',
                   ),
-                
                 ],
               ),
             ),
@@ -175,6 +174,22 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: ConfirmationSlider(
+                width: 380,
+                foregroundShape: BorderRadius.circular(12.0),
+                backgroundShape: BorderRadius.circular(12.0),
+                backgroundColor: Colors.deepPurple[200]!,
+                foregroundColor: Colors.deepPurple,
+                sliderButtonContent: Icon(
+                  Icons.account_balance_wallet_outlined,
+                  color: Colors.white,
+                ),
+                // iconColor: Colors.grey,
+                text: "Swipe to Pay",
+                textStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  
+                ),
                 onConfirmation: createPaymentNotification,
               ),
             ),
