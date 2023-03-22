@@ -4,7 +4,7 @@ import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:purplepay_task/buttons.dart';
 import 'package:purplepay_task/notifications.dart';
-import 'package:slide_to_act/slide_to_act.dart';
+import 'package:slide_to_confirm/slide_to_confirm.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'my_card.dart';
 
@@ -174,21 +174,8 @@ class _HomePageState extends State<HomePage> {
             Spacer(),
             Padding(
               padding: const EdgeInsets.all(12.0),
-              child: SlideAction(
-                borderRadius: 12,
-                elevation: 0,
-                innerColor: Colors.deepPurple,
-                outerColor: Colors.deepPurple[300],
-                sliderButtonIcon: const Icon(
-                  Icons.payment_rounded,
-                  color: Colors.white,
-                ),
-                text: 'Slide to Pay',
-                textStyle: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-                onSubmit: createPaymentNotification,
+              child: ConfirmationSlider(
+                onConfirmation: createPaymentNotification,
               ),
             ),
           ],
