@@ -1,4 +1,4 @@
-# purplepay_task
+# Purple Pay Wallet
 
 A new Flutter project.
 
